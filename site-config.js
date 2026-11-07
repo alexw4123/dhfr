@@ -1,4 +1,4 @@
 window.RESEARCH_SITE = {
-  "canonicalUrl": "https://alexw4123.github.io/dhfr-cinematic-viewer/",
+  "canonicalUrl": "https://alexw4123.github.io/dhfr/",
   "project": "dhfr"
 };

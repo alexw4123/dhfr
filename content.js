@@ -64,8 +64,8 @@ window.RESEARCH_CONTENT = {
         "atomCount": 3153,
         "bondCount": 3195,
         "files": {
-          "gs": "https://alexw4123.github.io/dhfr-cinematic-viewer/assets/dhfr-gs-connected.pdb",
-          "isog": "https://alexw4123.github.io/dhfr-cinematic-viewer/assets/dhfr-isog-connected.pdb"
+          "gs": "https://alexw4123.github.io/dhfr/assets/dhfr-gs-connected.pdb",
+          "isog": "https://alexw4123.github.io/dhfr/assets/dhfr-isog-connected.pdb"
         }
       },
       "components": [
