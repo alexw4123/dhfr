@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>Design, Synthesis, and Computational Evaluation of Peptide-Based Inhibitors Targeting Dihydrofolate Reductase in Cancer | Fairfield University</title>
-  <meta name="description" content="Dihydrofolate reductase (DHFR) helps maintain the folates cells need to make DNA. Explore guanosine and isoguanosine models from Fairfield University.">
+  <meta name="description" content="Compare two nucleopeptide models in human DHFR before tests for enzyme inhibition. Research from Fairfield University.">
   <meta name="author" content="Alexander Wong">
   <meta name="theme-color" content="#0b0f14">
   <meta name="color-scheme" content="dark light">
   <link rel="canonical" href="https://alexw4123.github.io/dhfr/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Design, Synthesis, and Computational Evaluation of Peptide-Based Inhibitors Targeting Dihydrofolate Reductase in Cancer | Fairfield University">
-  <meta property="og:description" content="Dihydrofolate reductase, two nucleopeptide models, and the experiments needed to test them. Smith-Carpenter Lab, in collaboration with Dr. Phelan.">
+  <meta property="og:title" content="Designing peptides to target DHFR">
+  <meta property="og:description" content="Compare two nucleopeptide models in human DHFR before tests for enzyme inhibition. Research from Fairfield University.">
   <meta property="og:site_name" content="Smith-Carpenter Lab | Fairfield University">
   <meta property="og:url" content="https://alexw4123.github.io/dhfr/">
   <meta property="og:image" content="https://alexw4123.github.io/dhfr/assets/share-card.jpg">
@@ -20,35 +20,43 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="DHFR research models, Fairfield University and Smith-Carpenter Lab.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Design, Synthesis, and Computational Evaluation of Peptide-Based Inhibitors Targeting Dihydrofolate Reductase in Cancer | Fairfield University">
-  <meta name="twitter:description" content="What dihydrofolate reductase does, why its chemistry matters, and how GS and isog models compare.">
+  <meta name="twitter:title" content="Designing peptides to target DHFR">
+  <meta name="twitter:description" content="Compare two nucleopeptide models in human DHFR before tests for enzyme inhibition. Research from Fairfield University.">
   <meta name="twitter:image" content="https://alexw4123.github.io/dhfr/assets/share-card.jpg">
-  <link rel="stylesheet" href="research-v6.css?v=20261028-dhfr-v6-title">
+  <link rel="stylesheet" href="research-v6.css?v=20261107-dhfr-linkedin">
   <script defer src="assets/ngl.js"></script>
   <script defer src="content.js?v=20261107-dhfr-clean-url"></script>
   <script defer src="application-data.js?v=20261028-dhfr-v6-title"></script>
   <script defer src="molecule-engine.js?v=20261028-dhfr-v6-title"></script>
   <script defer src="research-sections.js?v=20261028-dhfr-v6-title"></script>
-  <script defer src="app.js?v=20261107-dhfr-clean-url"></script>
+  <script defer src="app.js?v=20261107-dhfr-linkedin"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to research</a>
   <header class="site-header" id="site-header">
     <a class="site-brand" href="#overview" aria-label="Fairfield University, Smith-Carpenter Lab"><span><b>Fairfield</b> University</span><small>Smith-Carpenter Lab</small></a>
-    <nav aria-label="Page sections"><a href="#overview" aria-current="page">Overview</a><a href="#models">Models</a><a href="#research">Research</a></nav>
+    <nav aria-label="Page sections"><a href="#overview" aria-current="location">Overview</a><a href="#models">3D models</a><a href="#research">Research</a></nav>
   </header>
   <main id="main" tabindex="-1">
     <section class="hero" id="overview" aria-labelledby="hero-title">
-      <div class="hero-copy"><h1 id="hero-title">Design, Synthesis, and Computational Evaluation of Peptide-Based Inhibitors Targeting Dihydrofolate Reductase in Cancer</h1><p class="hero-intro">Dihydrofolate reductase (DHFR) helps cells maintain the folates needed to make DNA.</p></div>
+      <div class="hero-copy">
+        <h1 id="hero-title">Designing peptides to target DHFR</h1>
+        <p class="hero-intro">Dihydrofolate reductase (DHFR) helps cells make DNA. Compare models that pair the same peptide with different bases in its binding pocket. Inhibition tests are planned.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#models">Compare 3D models</a>
+          <a class="hero-explainer" href="#how-it-works">How DHFR works</a>
+        </div>
+        <p class="hero-credit"><span>Alexander Wong</span><span>In collaboration with Dr. Phelan</span></p>
+      </div>
       <div class="molecule-slot hero-molecule" data-slot="hero">
-        <img class="source-image" src="assets/dhfr-surface-source.png" alt="Source GS complex: silver human DHFR surface, rose nucleopeptide model, and violet NADPH" width="2400" height="1800" fetchpriority="high">
+        <img class="source-image" src="assets/dhfr-surface-source.png" alt="Source guanosine complex with a silver human DHFR surface, a rose nucleopeptide model and violet NADPH" width="2400" height="1800" fetchpriority="high">
         <div id="molecular-viewport" class="molecular-viewport" tabindex="-1" role="img" aria-label="Source model of human dihydrofolate reductase"></div>
       </div>
-      <p class="hero-caption">Human DHFR <span aria-hidden="true">·</span> <span id="hero-model-label">GS model</span></p>
-      <div id="opening-load-failure" class="opening-load-failure" role="alert" hidden><p>The live model could not load. This is the GS source image.</p><button id="retry-opening" type="button">Try again</button></div>
-      <a class="primary-action" href="#models">Compare models</a>
-      <button class="hero-atoms" id="hero-atoms" type="button" aria-pressed="false">Atoms</button>
-      <p class="hero-credit"><span>Alexander Wong</span><span>In collaboration with Dr. Phelan</span></p>
+      <div class="hero-model-meta">
+        <p class="hero-caption">Human DHFR <span aria-hidden="true">·</span> <span id="hero-model-label">Guanosine source image</span></p>
+        <button class="hero-atoms" id="hero-atoms" type="button" aria-controls="molecular-viewport" disabled>Show atoms</button>
+      </div>
+      <div id="opening-load-failure" class="opening-load-failure" role="alert" hidden><p>The live model could not load. This is the guanosine source image.</p><button id="retry-opening" type="button">Try again</button></div>
       <p id="model-load-status" class="sr-only" role="status" aria-live="polite">Loading the verified source model.</p>
     </section>
     <section class="how-section light-section" id="how-it-works" aria-labelledby="how-title">
@@ -84,7 +92,14 @@
       </div>
       <p class="model-context">These prepared poses guide the next comparisons. Their appearance does not establish binding strength or enzyme inhibition.</p>
     </section>
-    <section class="research-section light-section" id="research" aria-labelledby="research-title"><header class="section-heading"><h2 id="research-title">The research</h2><p>What has been prepared, what remains unresolved, and how the next experiments answer different questions.</p></header><div id="research-content"></div></section>
+    <section class="research-section light-section" id="research" aria-labelledby="research-title">
+      <header class="section-heading">
+        <h2 id="research-title">The research</h2>
+        <p class="formal-project-title"><strong>Project title</strong>Design, Synthesis, and Computational Evaluation of Peptide-Based Inhibitors Targeting Dihydrofolate Reductase in Cancer</p>
+        <p>What has been prepared, what remains unresolved, and how the next experiments answer different questions.</p>
+      </header>
+      <div id="research-content"></div>
+    </section>
     <footer class="site-footer"><span>Smith-Carpenter Lab <span aria-hidden="true">·</span> Fairfield University</span><a href="#research-sources">Sources and methods</a></footer>
   </main>
   <noscript><p class="noscript-note">The source images and opening explanation are available without JavaScript. Enable JavaScript to compare the live structures and open the research records.</p></noscript>

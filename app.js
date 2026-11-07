@@ -17,10 +17,14 @@
     document.querySelectorAll('[data-mode]').forEach(button => {button.setAttribute('aria-pressed', String(button.dataset.mode === state.mode));button.disabled = !state.ready;});
     document.querySelectorAll('[data-model]').forEach(button => {button.setAttribute('aria-pressed', String(button.dataset.model === state.model));button.disabled = !state.ready;});
     document.querySelectorAll('[data-component]').forEach(button => {button.setAttribute('aria-pressed', String(button.dataset.component === state.component));button.disabled = !state.ready;});
-    $('hero-atoms').setAttribute('aria-pressed', String(state.mode === 'atomic'));
+    $('hero-atoms').textContent = state.mode === 'atomic' ? 'Show surface' : 'Show atoms';
     $('hero-atoms').disabled = !state.ready;
     ['interaction-toggle','reset-view','zoom-in','zoom-out'].forEach(id=>{$(id).disabled = !state.ready;});
-    $('hero-model-label').textContent = state.ready && state.slot === 'hero' ? `${state.model === 'gs' ? 'GS' : 'isog'} model` : 'GS source image';
+    const heroView = { surface: 'surface', atomic: 'atoms', secondary: 'secondary structure' }[state.mode];
+    const heroBase = state.model === 'gs' ? 'Guanosine' : 'Isoguanosine';
+    $('hero-model-label').textContent = state.ready && state.slot === 'hero'
+      ? `${heroBase} model · ${heroView}`
+      : 'Guanosine source image';
     $('interaction-toggle').setAttribute('aria-pressed', String(state.interactive));
     $('interaction-toggle').textContent = state.interactive ? 'Finish exploring' : 'Touch controls';
     $('interaction-hint').textContent = state.interactive
@@ -197,7 +201,7 @@
     const section = [...document.querySelectorAll('#overview,#models,#research')].filter(node=>node.getBoundingClientRect().top < innerHeight*.45).at(-1);
     const current = section?.id || 'overview';
     document.querySelectorAll('.site-header nav a').forEach(link => {
-      if (link.hash === `#${current}`) link.setAttribute('aria-current','page');
+      if (link.hash === `#${current}`) link.setAttribute('aria-current','location');
       else link.removeAttribute('aria-current');
     });
   }
