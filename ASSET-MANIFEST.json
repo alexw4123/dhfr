@@ -1,6 +1,6 @@
 {
   "project": "dhfr",
-  "revision": "20261107-dhfr-linkedin",
+  "revision": "20261107-dhfr-study-title",
   "publicationStatus": "User-approved release",
   "sourceCoordinatesModified": false,
   "expectedAtoms": 3153,
@@ -46,13 +46,13 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "0b8856ab7f48157764387c4590406d83da84603ceab9be60e339371e6c0ce2e9",
-      "bytes": 10990
+      "sha256": "95c8cb287898ce0456a87827e7f3e0e4e55e0fb70fb68907f70b4d8c652c157d",
+      "bytes": 11079
     },
     {
       "path": "research-v6.css",
-      "sha256": "671642d3d389d03907ba1d173f9560fb078519c26861b98502471d46ecd2788d",
-      "bytes": 23387
+      "sha256": "b4ecf7ea74522e91a5ca199ddfc24c4d4c1ef6f028d75019a9a25f51955ca9b9",
+      "bytes": 23416
     },
     {
       "path": "app.js",

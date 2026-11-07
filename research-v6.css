@@ -80,7 +80,10 @@ code,pre,kbd,samp,select,textarea,.ngl-tooltip{font-family:"Times New Roman",Tim
   }
   .site-header nav a { font-size: 13px; white-space: nowrap; }
   .hero .hero-copy { max-width: 100%; padding: 0 20px; }
-  .hero .hero-copy h1 { font-size: clamp(30px, 8.8vw, 36px); }
+  .hero .hero-copy h1 {
+    font-size: clamp(24px, 6.6vw, 30px);
+    line-height: 1.12;
+  }
   .hero .hero-intro { font-size: 17px; line-height: 1.45; margin-top: 12px; }
   .hero-actions { gap: 6px 12px; margin-top: 16px; }
   .hero-actions .primary-action { min-height: 46px; padding-inline: 17px; font-size: 16px; }
