@@ -207,7 +207,6 @@
     const legacy = {"dhfr/overview":'overview',"dhfr/story":'how-it-works',"dhfr/molecules":'models',"dhfr/modeling":'research-modeling',"dhfr/laboratory":'research-laboratory',"dhfr/chemistry":'research-chemistry',"dhfr/applications":'research-applications',"dhfr/sources":'research-sources',"application-tour":'research-applications'};
     if (legacy[hash]) {hash=legacy[hash];history.replaceState(null,'',`#${hash}`);}
     if (!hash || hash === 'overview') {
-      if (!hash) history.replaceState(null,'','#overview');
       if (initial) requestAnimationFrame(()=>scrollTo({top:0,behavior:'instant'}));
       return;
     }
@@ -249,7 +248,7 @@
     history.replaceState(null,'','#overview');
     scrollTo({top:0,behavior:reduced.matches?'instant':'smooth'});
   }));
-  addEventListener('load',()=>{if (location.hash === '#overview') scrollTo({top:0,behavior:'instant'});},{once:true});
+  addEventListener('load',()=>{if (!location.hash || location.hash === '#overview') scrollTo({top:0,behavior:'instant'});},{once:true});
   addEventListener('scroll',scheduleScrollUpdate,{passive:true});
   addEventListener('resize',scheduleScrollUpdate);
   addEventListener('hashchange',()=>resolveHash());

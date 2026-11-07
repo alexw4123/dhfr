@@ -46,8 +46,8 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "38726506ae38f3076c7db03d47c0d0e35d3ef372da4f057fcc74b28c86424515",
-      "bytes": 10727
+      "sha256": "8cbe3532dde3033fb1080c19730e4409e3f8d5e3f26af33b0b9be9cd6c5a9cdf",
+      "bytes": 10728
     },
     {
       "path": "research-v6.css",
@@ -56,8 +56,8 @@
     },
     {
       "path": "app.js",
-      "sha256": "306f4ab9b7233a3cf79f3558c32dd29f5718b3c93b723c3a1f7cab0a3da79966",
-      "bytes": 16062
+      "sha256": "f5696dcce75f4d22c7f3370474232004726ec2e0b201f19915e289cd580c3c3d",
+      "bytes": 16020
     },
     {
       "path": "research-sections.js",
