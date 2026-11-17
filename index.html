@@ -4,14 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <script>
-    // Every new visit starts at the introduction; section links still work after it opens.
-    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-    function openAtTop() {
-      if (location.hash) history.replaceState(history.state, '', location.pathname + location.search);
-      window.scrollTo(0, 0);
-    }
-    openAtTop();
-    addEventListener('pageshow', event => { if (event.persisted) openAtTop(); });
+    (() => {
+      // Start each visit at the introduction, without interrupting a reader who has begun navigating.
+      let userNavigated = false;
+      const stopReset = () => { userNavigated = true; };
+      ['wheel', 'touchstart', 'pointerdown', 'keydown', 'hashchange'].forEach(type =>
+        addEventListener(type, stopReset, {capture: true, passive: true}));
+      const clearSection = () => {
+        if (location.hash) history.replaceState(history.state, '', location.pathname + location.search);
+      };
+      const resetIfIdle = () => {
+        if (!userNavigated) window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+      };
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      clearSection();
+      resetIfIdle();
+      document.addEventListener('DOMContentLoaded', resetIfIdle, {once: true});
+      addEventListener('load', resetIfIdle, {once: true});
+      addEventListener('pageshow', event => {
+        if (event.persisted) { userNavigated = false; clearSection(); }
+        resetIfIdle();
+        requestAnimationFrame(() => requestAnimationFrame(resetIfIdle));
+      });
+    })();
   </script>
   <title>Design, Synthesis, and Computational Evaluation of Peptide-Based Inhibitors Targeting Dihydrofolate Reductase in Cancer | Fairfield University</title>
   <meta name="description" content="Compare two nucleopeptide models in human DHFR before tests for enzyme inhibition. Research from Fairfield University.">
