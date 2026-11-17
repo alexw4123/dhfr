@@ -23,7 +23,7 @@ jobs:
           mkdir -p _site/assets
           unzip -q assets.zip -d _site
           cp index.html research-v6.css app.js research-sections.js molecule-engine.js content.js application-data.js site-config.js README.md .nojekyll ASSET-MANIFEST.json _site/
-          cp assets/selection-maps.v1.compact.json assets/share-card.jpg assets/dhfr-surface-source.png _site/assets/
+          cp assets/selection-maps.v1.compact.json assets/share-card.jpg assets/share-card-ui-20261117.jpg assets/dhfr-surface-source.png _site/assets/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
